@@ -30,7 +30,7 @@ public class StripePaymentGateway implements PaymentGateway {
                 .setMode(SessionCreateParams.Mode.PAYMENT) //支付模式：一次性支付（Payment）、订阅支付（SUBSCRIPTION）
                 .setSuccessUrl(websiteUrl + "/checkout-success?orderId=" + order.getId())
                 .setCancelUrl(websiteUrl + "/check-cancel")
-                .putMetadata("order_id", order.getId().toString());
+                .setPaymentIntentData(createPaymentIntent(order));
 
             order.getItems().forEach(item -> {
                 var lineItem = createLieItem(item);
@@ -44,6 +44,10 @@ public class StripePaymentGateway implements PaymentGateway {
             System.out.println(ex.getMessage());
             throw new PaymentException();
         }
+    }
+
+    private static SessionCreateParams.PaymentIntentData createPaymentIntent(Order order) {
+        return SessionCreateParams.PaymentIntentData.builder().putMetadata("order_id", order.getId().toString()).build();
     }
 
     @Override
