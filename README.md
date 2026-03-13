@@ -5,11 +5,19 @@
   <img src="https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT">
   <img src="https://img.shields.io/badge/Stripe-Payments-635BFF?style=for-the-badge&logo=stripe&logoColor=white" alt="Stripe">
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/Deploy-Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white" alt="Railway">
 </p>
 
 # 🛒 Store API — B2C 电商平台后端
 
 > 基于 **Spring Boot 3** 构建的 RESTful 电商后端系统，提供完整的用户认证、商品管理、购物车、订单与在线支付能力。
+
+<p align="center">
+  🌐 <strong>线上演示：</strong>
+  <a href="https://spring-boot-store-production-3a9d.up.railway.app/swagger-ui.html">
+    https://spring-boot-store-production-3a9d.up.railway.app
+  </a>
+</p>
 
 ---
 
